@@ -1,7 +1,7 @@
 ---
 title: "Pythonで株価データを取得する完全ガイド - yfinance入門"
 date: 2025-03-20T21:58:00+09:00
-draft: true
+draft: false
 categories:
   - beginner
 tags:

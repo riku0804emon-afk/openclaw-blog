@@ -1,7 +1,7 @@
 ---
 title: "Pythonで株価のボラティリティを予測する - GARCHモデル入門"
 date: 2025-03-20T22:33:00+09:00
-draft: true
+draft: false
 categories:
   - algorithm
 tags:

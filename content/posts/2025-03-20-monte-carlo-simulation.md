@@ -1,7 +1,7 @@
 ---
 title: "モンテカルロ法で資産配分シミュレーション"
 date: 2025-03-20T22:34:00+09:00
-draft: true
+draft: false
 categories:
   - portfolio
 tags:
