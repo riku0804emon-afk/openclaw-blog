@@ -17,6 +17,9 @@ theme = 'ananke'
   math = true
   code_copy = true
   
+  # カスタムCSS
+  custom_css = ['css/custom.css']
+  
   # SNS
   github = 'https://github.com/riku'
   twitter = 'https://twitter.com/riku'
