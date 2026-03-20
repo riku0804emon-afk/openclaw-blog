@@ -1,0 +1,49 @@
+# エラー解決コマンド
+
+## エラーの原因
+GitHub上にREADME.mdなどのファイルが既に存在し、
+ローカルの履歴とリモートの履歴が一致しないため。
+
+## 解決策
+
+### 方法1: リモートの履歴を取り込む（推奨）
+
+```powershell
+cd C:\Users\riku0\.openclaw\workspace\algo-money-blog
+git pull origin main --allow-unrelated-histories
+```
+
+エディタが開いたら（vim/nanoなど）:
+- `:wq` と入力してEnter（vimの場合）
+- または Ctrl+X → Y → Enter（nanoの場合）
+
+その後:
+```powershell
+git push -u origin main
+```
+
+### 方法2: 強制プッシュ（GitHubの既存ファイルを上書き）
+
+⚠️ 注意: GitHub上の既存ファイルは失われます
+
+```powershell
+cd C:\Users\riku0\.openclaw\workspace\algo-money-blog
+git push -u origin main --force
+```
+
+## 方法1でエディタが開いた時の対処
+
+### vimの場合:
+1. `Esc` キーを押す
+2. `:wq` とタイプ
+3. `Enter`
+
+### nanoの場合:
+1. `Ctrl + X` を押す
+2. `Y` を押す（保存確認）
+3. `Enter`
+
+## 成功確認
+
+プッシュ成功後、ブラウザで確認:
+https://github.com/riku0804emon-afk/openclaw-blog-money

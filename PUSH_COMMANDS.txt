@@ -1,0 +1,39 @@
+# algo-money.dev ブログ プッシュ用コマンド
+# リポジトリ: https://github.com/riku0804emon-afk/openclaw-blog-money
+
+## 手順
+
+### 1. ブログディレクトリに移動
+cd C:\Users\riku0\.openclaw\workspace\algo-money-blog
+
+### 2. Git初期化（まだの場合）
+git init
+
+### 3. リモートリポジトリを設定
+git remote add origin https://github.com/riku0804emon-afk/openclaw-blog-money.git
+
+### 4. すべてのファイルをステージング
+git add .
+
+### 5. Hugoテーマをサブモジュールとして追加
+git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+
+### 6. コミット
+git commit -m "Initial commit: Hugo blog setup with 5 posts and deploy config"
+
+### 7. プッシュ
+git push -u origin main
+
+## エラーが出た時の対処
+
+### "remote origin already exists"
+git remote remove origin
+git remote add origin https://github.com/riku0804emon-afk/openclaw-blog-money.git
+
+### 認証エラー
+GitHubでPersonal Access Tokenを作成:
+https://github.com/settings/tokens
+→ "repo" にチェック → 生成したトークンをパスワードとして使用
+
+### サブモジュールのエラー
+git submodule update --init --recursive

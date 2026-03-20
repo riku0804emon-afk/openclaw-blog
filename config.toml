@@ -1,0 +1,73 @@
+baseURL = 'https://algo-money.dev'
+languageCode = 'ja'
+title = 'algo-money.dev'
+theme = 'ananke'
+
+[params]
+  author = 'りく'
+  description = 'Pythonで始めるアルゴリズム投資 - 数理ファイナンスとプログラミングの融合'
+  keywords = ['Python', '投資', 'アルゴリズム取引', '数理ファイナンス', '株価分析']
+  
+  # カラースキーム
+  primary_color = '#1a5f2a'
+  secondary_color = '#2d3748'
+  accent_color = '#f6ad55'
+  
+  # 機能設定
+  math = true
+  code_copy = true
+  
+  # SNS
+  github = 'https://github.com/riku'
+  twitter = 'https://twitter.com/riku'
+
+[menu]
+  [[menu.main]]
+    name = 'ホーム'
+    url = '/'
+    weight = 10
+  [[menu.main]]
+    name = '入門編'
+    url = '/categories/beginner/'
+    weight = 20
+  [[menu.main]]
+    name = 'テクニカル分析'
+    url = '/categories/technical/'
+    weight = 30
+  [[menu.main]]
+    name = 'ポートフォリオ理論'
+    url = '/categories/portfolio/'
+    weight = 40
+  [[menu.main]]
+    name = 'アルゴリズム戦略'
+    url = '/categories/algorithm/'
+    weight = 50
+  [[menu.main]]
+    name = 'About'
+    url = '/about/'
+    weight = 60
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['$$', '$$']]
+          inline = [['$', '$']]
+  [markup.highlight]
+    style = 'github'
+    lineNos = true
+    codeFences = true
+
+[outputs]
+  home = ['HTML', 'RSS']
+  page = ['HTML']
+  section = ['HTML', 'RSS']
+
+[outputFormats.RSS]
+  mediatype = "application/rss"
